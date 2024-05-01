@@ -1,5 +1,5 @@
-//  "use strict";
-// Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas. 
+"use strict";
+// Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas.
 //Por exemplo:
 // a = "Joaquim";
 // console.log(a);
@@ -7,7 +7,7 @@
 // console.log(eval);
 // Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas, caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos indesejados e erros silenciosos, tornando o código mais seguro e previsível.
 
-//Capturar o botão testar através do id com o objeto document do DOM.
+// Capturar o botão testar através do id com o objeto document do DOM.
 // const btnElemento = document.getElementById("botao");
 // //Atrelar ao botão um evento de click.
 // btnElemento.addEventListener("click",function(){
@@ -16,11 +16,12 @@
 
 //Diferença entre var e let:
 // Hoisting
-let nome = "Joaquim";
+// nome = "NADA";
+// console.log(nome);
+var nome = "Joaquim";
 
-if(true)
-{
-    let nome = "João";
+if (true) {
+  let nome = "João";
 }
 
 console.log(nome);
@@ -43,13 +44,23 @@ console.log(z);
 // Tipos de dados em JavaScript:
 // Number
 let num = 10;
+let num2 = 10.34;
+console.log(num);
+console.log(num2);
+
+num = "10";
 console.log(num);
 
 // String
 let str = "Olá, mundo!";
 console.log(str.charAt(0));
 console.log(str.indexOf("mundo"));
-str = str.replace("mundo", "pessoas");
+let str2 = str.slice(
+  str.indexOf("mundo"),
+  str.indexOf("mundo") + "mundo".length
+);
+console.log(str2);
+str = str.replace("mundo", "Gatos e Gatas");
 console.log(str);
 // Boolean
 let bool = true;
@@ -57,7 +68,7 @@ console.log(bool);
 
 // Array numérico
 let arr1 = [1, 2, 3, 4, 5];
-let arr2 = [6,7,8,9,10];
+let arr2 = [6, 7, 8, 9, 10];
 console.log(arr1);
 console.table(arr1);
 // Mesclar Arrays com concat()
@@ -73,7 +84,7 @@ console.log(arr5);
 console.table(arr5);
 
 // Object
-let obj = { nome: "João", idade: 25, devedor: true};
+let obj = { nome: "João", idade: 25, devedor: true };
 console.log(obj);
 console.table(obj);
 console.log(obj.nome);
@@ -84,13 +95,13 @@ console.log(obj["nome"]);
 let atributo = "idade";
 console.log("ATRIBUTO VARIADO : " + obj[atributo]);
 //Adicionando um nova propriedade ao objeto OBJ e utilizando o operador SPREAD para preencher
-obj = {...obj, cidade: "São Paulo", estado: "SP"};
+obj = { ...obj, cidade: "São Paulo", estado: "SP" };
 console.log(obj);
 
 //DESTRUCTURING
-const pessoa = {nome2 : 'Maria', idade2: 34, cidade: 'Florianópolis'};
+const pessoa = { nome2: "Maria", idade2: 34, cidade: "Florianópolis" };
 
-const {nome2, idade2, cidade} = pessoa;
+const { nome2, idade2, cidade } = pessoa;
 console.log(nome2);
 console.log(idade2);
 console.log(cidade);
@@ -100,6 +111,9 @@ console.log(cidade);
 let strNumero = "10";
 let numero = parseInt(strNumero);
 console.log(numero); // Saída: 10 (número)
+let strNumero3 = "10.1";
+let numero2 = parseFloat(strNumero3);
+console.log(numero2); // Saída: 10.1 (número)
 
 // Converter número para string
 let numeroStr = 20;
@@ -123,7 +137,7 @@ console.log(booleano); // Saída: false (0 é considerado false)
 // Por exemplo:
 
 let idade = 20;
-let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+let result = idade >= 18 ? "Maior de idade" : "Menor de idade";
 console.log(result);
 
 // Neste exemplo, se a idade for maior ou igual a 18, a variável result receberá a string "Maior de idade"; caso contrário, receberá a string "Menor de idade".
@@ -136,9 +150,9 @@ console.log(result);
 let age = 20;
 
 if (age >= 18) {
-    console.log("Maior de idade");
+  console.log("Maior de idade");
 } else {
-    console.log("Menor de idade");
+  console.log("Menor de idade");
 }
 
 // Neste exemplo, se a idade for maior ou igual a 18, o programa imprimirá "Maior de idade"; caso contrário, imprimirá "Menor de idade".
@@ -148,15 +162,15 @@ if (age >= 18) {
 let nota = 75;
 
 if (nota >= 90) {
-    console.log("Nota A");
+  console.log("Nota A");
 } else if (nota >= 80 && nota < 90) {
-    console.log("Nota B");
+  console.log("Nota B");
 } else if (nota >= 70 && nota < 80) {
-    console.log("Nota C");
+  console.log("Nota C");
 } else if (nota >= 60 && nota < 70) {
-    console.log("Nota D");
+  console.log("Nota D");
 } else {
-    console.log("Nota F");
+  console.log("Nota F");
 }
 
 // Operadores de Comparação:
@@ -171,7 +185,6 @@ if (nota >= 90) {
 // let x = 5;
 // let y = "5";
 // console.log(x === y); // Saída: false
-
 
 // Diferente (!=):
 // Verifica se dois valores não são iguais, convertendo os tipos, se necessário.
@@ -251,10 +264,8 @@ if (nota >= 90) {
 // Qual é o tipo de dado da variável str?
 // let str = "Olá, mundo!";
 
-
 // Exercício 4 - Mesclar Arrays:
 // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2. Imprima arrConcatenado no console.
-
 
 // Exercício 5 - Acesso a Propriedades de Objetos:
 // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
@@ -263,7 +274,6 @@ if (nota >= 90) {
 
 // Exercício 6 - Atributo Variável de Objetos:
 // Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
-
 
 // Exercício 7 - Conversão de String para Número:
 // Converta a string "10" em um número e imprima o resultado no console.

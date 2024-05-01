@@ -1,4 +1,4 @@
-//  "use strict";
+"use strict";
 // Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas. 
 //Por exemplo:
 // a = "Joaquim";
@@ -7,7 +7,7 @@
 // console.log(eval);
 // Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas, caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos indesejados e erros silenciosos, tornando o código mais seguro e previsível.
 
-//Capturar o botão testar através do id com o objeto document do DOM.
+// Capturar o botão testar através do id com o objeto document do DOM.
 // const btnElemento = document.getElementById("botao");
 // //Atrelar ao botão um evento de click.
 // btnElemento.addEventListener("click",function(){
@@ -16,7 +16,9 @@
 
 //Diferença entre var e let:
 // Hoisting
-let nome = "Joaquim";
+// nome = "NADA";
+// console.log(nome);
+var nome = "Joaquim";
 
 if(true)
 {
@@ -43,13 +45,20 @@ console.log(z);
 // Tipos de dados em JavaScript:
 // Number
 let num = 10;
+let num2 = 10.34;
+console.log(num);
+console.log(num2);
+
+num = "10";
 console.log(num);
 
 // String
 let str = "Olá, mundo!";
 console.log(str.charAt(0));
 console.log(str.indexOf("mundo"));
-str = str.replace("mundo", "pessoas");
+let str2 = str.slice(str.indexOf("mundo"),(str.indexOf("mundo")+"mundo".length))
+console.log(str2);
+str = str.replace("mundo", "Gatos e Gatas");
 console.log(str);
 // Boolean
 let bool = true;
@@ -100,6 +109,9 @@ console.log(cidade);
 let strNumero = "10";
 let numero = parseInt(strNumero);
 console.log(numero); // Saída: 10 (número)
+let strNumero3 = "10.1";
+let numero2 = parseFloat(strNumero3);
+console.log(numero2); // Saída: 10.1 (número)
 
 // Converter número para string
 let numeroStr = 20;

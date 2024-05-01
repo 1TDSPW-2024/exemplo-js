@@ -8,11 +8,11 @@
 // Em strict mode, todas as atribuições devem ser feitas a variáveis previamente declaradas, caso contrário, um erro de referência será lançado. Isso ajuda a evitar comportamentos indesejados e erros silenciosos, tornando o código mais seguro e previsível.
 
 //Capturar o botão testar através do id com o objeto document do DOM.
-// const btnElemento = document.getElementById("botao");
-// //Atrelar ao botão um evento de click.
-// btnElemento.addEventListener("click",function(){
-//     console.log("Testando o botão...");
-// });
+    //const btnElemento = document.getElementById("botao");
+    //Atrelar ao botão um evento de click.
+    //btnElemento.addEventListener("click",function(){
+    //console.log("Testando o botão...");
+    //});
 
 //Diferença entre var e let:
 // Hoisting
@@ -233,7 +233,7 @@ if (nota >= 90) {
 
 // EXERCÍCIOS
 
-// Exercício 1 - Variáveis e Hoisting:
+Exercício 1 - Variáveis e Hoisting:
 // Qual será o valor de nome após a execução do código abaixo?
 // "use strict";
 // var nome = "Joaquim";
@@ -242,39 +242,68 @@ if (nota >= 90) {
 // }
 // console.log(nome);
 
-// Exercício 2 - Declaração de Variáveis:
+Resultado = João
+
+Exercício 2 - Declaração de Variáveis:
 // Declare uma variável estrito utilizando let sem atribuir um valor. Imprima o valor de estrito no console.
 // let estrito;
 // console.log(estrito); // Saída: undefined
 
-// Exercício 3 - Tipos de Dados:
+let nomePessoa = "Robert";
+console.log(nomePessoa);
+
+Saída: Robert
+
+Exercício 3 - Tipos de Dados:
 // Qual é o tipo de dado da variável str?
 // let str = "Olá, mundo!";
 
+Resultado = Tipo de dado é string
 
-// Exercício 4 - Mesclar Arrays:
+
+Exercício 4 - Mesclar Arrays:
 // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2. Imprima arrConcatenado no console.
 
+let arr6 = [1, 2, 3, 4, 5];
+let arr7 = [6, 7, 8, 9, 10];
 
-// Exercício 5 - Acesso a Propriedades de Objetos:
+let arr8 = arr6.concat(arr7);
+console.log(arr8);
+
+
+Exercício 5 - Acesso a Propriedades de Objetos:
 // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
 // let obj = { nome: "João", idade: 25, devedor: true };
 // console.log(obj.idade); // Saída: 25
 
-// Exercício 6 - Atributo Variável de Objetos:
+let atributoIdade = "idade";
+console.log("ATRIBUTO IDADE: " + obj[atributoIdade]);
+
+
+Exercício 6 - Atributo Variável de Objetos:
 // Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
 
+obj = {...obj, cidade: "São Paulo"};
+HTMLFormControlsCollection.log(obj);
 
-// Exercício 7 - Conversão de String para Número:
+
+
+Exercício 7 - Conversão de String para Número:
 // Converta a string "10" em um número e imprima o resultado no console.
 
-// Exercício 8 - Estrutura Condicional com Operadores:
+let strNumeroConversao = "10"
+let numeroInteiro = parseInt(strNumeroConversao);
+console.log(numeroInteiro);
+
+Exercício 8 - Estrutura Condicional com Operadores:
 // Qual será a saída do código abaixo?
 // let idade = 20;
 // let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
 // console.log(result);
 
-// Exercício 9 - Estrutura Condicional Tradicional:
+Resultado = maior de idade
+
+Exercício 9 - Estrutura Condicional Tradicional:
 // Qual será a saída do código abaixo?
 // let age = 20;
 
@@ -282,7 +311,15 @@ if (nota >= 90) {
 //     console.log("Maior de idade");
 // } else {
 //     console.log("Menor de idade");
+
+Resultado = Maior de idade
 // }
 
-// Exercício 10 - Mesclar Arrays com Spread:
+Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
+
+let arr9 = [1, 2, 3, 4, 5]
+let arr10 = [6, 7, 8, 9, 10]
+
+let arr11 = [...arr9, ...arr10];
+console.log(arr11);

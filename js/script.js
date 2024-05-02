@@ -235,54 +235,62 @@
 
 // Exercício 1 - Variáveis e Hoisting:
 // Qual será o valor de nome após a execução do código abaixo?
-// "use strict";
-// var nome = "Joaquim";
-// if (true) {
-//     let nome = "João";
-// }
-// console.log(nome);
+"use strict";
+var nome = "Joaquim";
+if (true) {
+    let nome = "João";
+}
+console.log(nome);
 
 // Exercício 2 - Declaração de Variáveis:
 // Declare uma variável estrito utilizando let sem atribuir um valor. Imprima o valor de estrito no console.
-// let estrito;
-// console.log(estrito); // Saída: undefined
+let estrito;
+console.log(estrito); // Saída: undefined
 
 // Exercício 3 - Tipos de Dados:
 // Qual é o tipo de dado da variável str?
-// let str = "Olá, mundo!";
+let str = "Olá, mundo!";
+console.log(typeof str) // string
 
 
 // Exercício 4 - Mesclar Arrays:
 // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2. Imprima arrConcatenado no console.
-
+let arr1 = [1, 2, 3, 4, 5];
+let arr2 = [6,7,8,9,10];
+let arrConcatenado = arr1.concat(arr2)
+console.log(arrConcatenado)
 
 // Exercício 5 - Acesso a Propriedades de Objetos:
 // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
-// let obj = { nome: "João", idade: 25, devedor: true };
-// console.log(obj.idade); // Saída: 25
+let obj = { nome: "João", idade: 25, devedor: true };
+console.log(obj.idade); // Saída: 25
 
 // Exercício 6 - Atributo Variável de Objetos:
 // Atribua a string "São Paulo" à propriedade cidade do objeto obj. Imprima obj no console.
-
+obj.cidade = "São Paulo"
+console.log(obj)
 
 // Exercício 7 - Conversão de String para Número:
 // Converta a string "10" em um número e imprima o resultado no console.
+console.log(parseFloat("10"))
 
 // Exercício 8 - Estrutura Condicional com Operadores:
 // Qual será a saída do código abaixo?
-// let idade = 20;
-// let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
-// console.log(result);
+let idade = 20;
+let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+console.log(result);
 
 // Exercício 9 - Estrutura Condicional Tradicional:
 // Qual será a saída do código abaixo?
-// let age = 20;
+let age = 20;
 
-// if (age >= 18) {
-//     console.log("Maior de idade");
-// } else {
-//     console.log("Menor de idade");
-// }
+if (age >= 18) {
+    console.log("Maior de idade");
+} else {
+    console.log("Menor de idade");
+}
 
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
+let arr4 = [...arr1, ...arr2]
+console.log(arr4)

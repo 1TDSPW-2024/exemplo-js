@@ -255,7 +255,7 @@ console.log(estrito); // Saída: undefined
 
 // Exercício 4 - Mesclar Arrays:
 // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2. Imprima arrConcatenado no console.
-let arrConcatenado = [...arr1, ...arr2];
+let arrConcatenado = arr1.concat(arr2);
 console.log(arrConcatenado);
 
 // Exercício 5 - Acesso a Propriedades de Objetos:
@@ -272,15 +272,21 @@ console.log(obj);
 
 // Exercício 7 - Conversão de String para Número:
 // Converta a string "10" em um número e imprima o resultado no console.
+let string = "10";
+let stringNumb = parseInt(string);
+console.log(stringNumb);
 
 // Exercício 8 - Estrutura Condicional com Operadores:
 // Qual será a saída do código abaixo?
+// R: Maior de idade, porque o valor da variável idade é maior que 18, tornando o valor true.
+
 // let idade = 20;
 // let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
 // console.log(result);
 
 // Exercício 9 - Estrutura Condicional Tradicional:
 // Qual será a saída do código abaixo?
+// R: Também será maior de idade, porque o valor da variável é maior que 18.
 // let age = 20;
 
 // if (age >= 18) {
@@ -291,3 +297,6 @@ console.log(obj);
 
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 utilizando o operador spread. Imprima arr4 no console.
+let array4 = [...arr1, ...arr2];
+console.log(array4);
+// Mudei o nome da variável para poder ser executada.

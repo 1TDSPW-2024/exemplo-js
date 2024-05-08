@@ -701,15 +701,17 @@ function validacao(input1,input2){
 
   for (let x = 0; x < listaUsuarios.length; x++) {
     if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value) ){
-      
+      //Guardando o objeto validado no localStorage.
+      localStorage.setItem("usuario-valida", JSON.stringify(listaUsuarios[x]));
+
       elMsgStatus.setAttribute("class","sucesso");
       elMsgStatus.innerText = "Login realizado com Sucesso!"; 
       setTimeout(()=>{
         elMsgStatus.setAttribute("class","valida");
         elMsgStatus.innerText = "";
-        window.location.href = "../status/sucesso.html"
+        window.location.href = "../status/sucesso.html";
       },3000);
-      return true;
+      return false;
     }
   }
 
@@ -718,6 +720,7 @@ function validacao(input1,input2){
     setTimeout(()=>{
       elMsgStatus.setAttribute("class","valida");
       elMsgStatus.innerText = "";
+      window.location.href = "../status/erro.html";
     },3000);
 
     return false;

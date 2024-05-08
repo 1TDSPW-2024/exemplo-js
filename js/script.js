@@ -705,6 +705,7 @@ const elMsgStatus = document.querySelector(".valida");
       setTimeout(() => {
         elMsgStatus.setAttribute("class", "valida");
         elMsgStatus.innerText = "";
+        window.location.href = "../status/sucesso.html"
       },3000);
       return true;
     }

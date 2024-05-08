@@ -694,12 +694,17 @@ let listaUsuarios = [
 //   }
 // });
 
-for (let x = 0; x < listaUsuarios.length; x++) {
-  // console.log(listaUsuarios[x].emailUsuario);
-  if(listaUsuarios[x].emailUsuario == "mo@email.com"){
-    console.log("Email validado!");
-    break;
-  }else{
-    console.log("Email nao validado!");
+
+function validacao(input1,input2){
+  
+  for (let x = 0; x < listaUsuarios.length; x++) {
+    if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value) ){
+      console.log("Login realizado com Sucesso!");
+      return true;
+    }
   }
+
+    console.log("Email ou Senha incorretos!");
+    return false;
+
 }

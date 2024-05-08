@@ -693,16 +693,33 @@ let listaUsuarios = [
 //   }
 // })
 
-for (let x = 0; x < listaUsuarios.length; x++) {
-  
-  //console.log(listaUsuarios[x].emailUsuario);
+function validacao(input1,input2) {
 
-  if(listaUsuarios[x].emailUsuario == "jo@email.com") {
-    console.log("Email validado!")
-    break;
-  } else {
-    console.log("Email não validado!");
+const elMsgStatus = document.querySelector(".valida");
+
+  for (let x = 0; x < listaUsuarios.length; x++) {
+    if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value) ) {
+      
+      elMsgStatus.setAttribute("class", "sucesso");
+      elMsgStatus.innerText = "Login realizado com Sucesso!";
+      setTimeout(() => {
+        elMsgStatus.setAttribute("class", "valida");
+        elMsgStatus.innerText = "";
+      },3000);
+      return true;
+    }
   }
 
+    elMsgStatus.setAttribute("class", "erro");
+    elMsgStatus.innerText = "Email ou Senha incorretos!";
+    setTimeout(() => {
+      elMsgStatus.setAttribute("class", "valida");
+      elMsgStatus.innerText = "";
+    },3000);
+      return false;
 
-}
+
+  }
+
+  // toggle
+  // classList

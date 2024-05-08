@@ -707,6 +707,7 @@ function validacao(input1,input2){
       setTimeout(()=>{
         elMsgStatus.setAttribute("class","valida");
         elMsgStatus.innerText = "";
+        window.location.href = "../status/sucesso.html"
       },3000);
       return true;
     }

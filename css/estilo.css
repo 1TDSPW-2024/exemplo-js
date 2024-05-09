@@ -2,25 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-<<<<<<< HEAD
-    
 }
 
-#cabecalho{
-  display: flex;
-  justify-content: space-between;
-
-  h1{
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 200px;
-  }
-
-=======
+.sucesso{
+  color:#085608;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #5cdf5c;
+  border: 2px solid #085608;
 }
 
-#cabecalho{
-    background-color: aquamarine;
-    height: 190px;
->>>>>>> 7b437d9ba520a2ab22f1417b03e772dd0841151a
+.erro{
+  color:#ff0000;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #f18181;
+  border: 2px solid #ff0000;
 }

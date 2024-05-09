@@ -1,4 +1,4 @@
-
+/* 
 //  "use strict";
 // Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas.
 //Por exemplo:
@@ -205,7 +205,7 @@ if (nota >= 90) {
   console.log("Nota D");
 } else {
   console.log("Nota F");
-}
+} */
 
 // Operadores de Comparação:
 // Igualdade (==):
@@ -788,7 +788,7 @@ if (nota >= 90) {
 
 // // Exercício 7 - Conversão de String para Número:
 // // Converta a string "10" em um número e imprima o resultado no console.
-
+/* 
 // // Exercício 8 - Estrutura Condicional com Operadores:
 // // Qual será a saída do código abaixo?
 // // let idade = 20;
@@ -918,9 +918,39 @@ function validacao(input1,input2){
       window.location.href = "../status/erro.html";
     },3000);
 
+    return false; */
+
+/* } */
+let listaUsuarios=[
+  {nomeCompleto:"Joao das Couves",emailUsuario:"jo@com",senhaUsuario:"123"},
+  {nomeCompleto:"Leonardo Kawachi",emailUsuario:"leo@com",senhaUsuario:"123"},
+  {nomeCompleto:"Eduardo Kawachi",emailUsuario:"du@com",senhaUsuario:"123"},
+];
+
+
+function validaLogin(input1,input2){
+  const msgStatus = document.querySelector(".valida")
+for (let x = 0; x < array.length; x++) {
+  
+  if((listaUsuarios[x].emailUsuario==input1.value) && (usuario.senhaUsuario==input2.value)){
+    msgStatus.setAttribute("class","sucesso");
+    msgStatus.innerText = "Logado com sucesso";
+    setTimeout(()=>{
+      msgStatus.setAttribute("class","valida");
+      msgStatus.innerText=""
+      window.location.href="../status/sucesso.html"
+    }, 3000);
     return false;
-
+  }
 }
-
+msgStauts.setAttribute("class","erro");
+    msgStatus.innerText = "Ocorreu um erro";
+    setTimeout(()=>{
+      msgStatus.setAttribute("class","valida");
+      msgStatus.innerText=""
+      window.location.href="../status/erro.html"
+    }, 3000);
+    return false;
+}
 //toggle
 //classList

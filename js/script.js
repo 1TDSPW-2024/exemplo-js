@@ -21,31 +21,31 @@ const apresentaMsgTela = (msg1,msg2)=>{
 // apresentaMsgTela(msg1,msg2);
 
 //Recuperando o botão submit com querySelector
-const elBtn = document.querySelector("button[type=submit]");
+// const elBtn = document.querySelector("button[type=submit]");
 
 
-const minhaFunc = ()=>{
-    console.log("EXECUTOU!");
-}
+// const minhaFunc = ()=>{
+//     console.log("EXECUTOU!");
+// }
 
-elBtn.addEventListener("click",()=>{
+// elBtn.addEventListener("click",()=>{
 
-    const email = document.querySelector("input[type=email]").value;
-    const senha = document.querySelector("input[type=password]").value;
+//     const email = document.querySelector("input[type=email]").value;
+//     const senha = document.querySelector("input[type=password]").value;
 
-    if(email == "" || senha == ""){
-        apresentaMsgTela("Campo vazio!","Preencha todos os campos!");
-    }else{
-        if(senha.length < 6)
-            apresentaMsgTela("Senha fora do padrão");
-        else
-            minhaFunc();
-    }
+//     if(email == "" || senha == ""){
+//         apresentaMsgTela("Campo vazio!","Preencha todos os campos!");
+//     }else{
+//         if(senha.length < 6)
+//             apresentaMsgTela("Senha fora do padrão");
+//         else
+//             minhaFunc();
+//     }
         
 
 
     
-});
+// });
 
 
 
@@ -653,22 +653,79 @@ elBtn.addEventListener("click",()=>{
 // elBtn.innerHTML = "ME CLICA";
 // console.log(elBtn.innerText);
 
-const elBtn = document.querySelector("button[type='submit']");
+// const elBtn = document.querySelector("button[type='submit']");
 
-elBtn.addEventListener("click", function(){
-  const email = document.querySelector("input[type='email']").value;
-  const senha = document.querySelector("input[type='password']").value
+// elBtn.addEventListener("click", function(){
+//   const email = document.querySelector("input[type='email']").value;
+//   const senha = document.querySelector("input[type='password']").value
 
-  if (email === "" || senha === "") {
-    alert("Preencha todos os campos!");
+//   if (email === "" || senha === "") {
+//     alert("Preencha todos os campos!");
+//   }
+
+//   if (senha.length < 6) {
+//     alert("A senha deve ter no mínimo 6 caracteres!");
+//   }
+
+//   else {
+//     console.log("Email: " + email);
+//     console.log("Senha: " + senha); 
+//   }
+// });
+
+//Criando uma lista de usuarios
+let listaUsuarios = [
+  {emailUsuario:"jo@email.com",senhaUsuario:"123456"},
+  {emailUsuario:"re@email.com",senhaUsuario:"123456"},
+  {emailUsuario:"mo@email.com",senhaUsuario:"123456"},
+  {emailUsuario:"lu@email.com",senhaUsuario:"123456"},
+  {emailUsuario:"du@email.com",senhaUsuario:"123456"}
+];
+
+//Percorrer a lista de usuarios
+//forEach(funcao(valor,indice,array))
+// listaUsuarios.forEach((usuario,indice)=>{
+//   // console.log(`Usuario nr:${indice+1} Email usuario:${usuario.emailUsuario} Senha:${usuario.senhaUsuario}`)
+//   if(usuario.emailUsuario == "jo@email.com"){
+//     console.log("Email validado");
+//     return true;
+//   }else{
+//     console.log("Email nao validado!");
+//   }
+// });
+
+
+function validacao(input1,input2){
+  
+  const elMsgStatus = document.querySelector(".valida");
+
+  for (let x = 0; x < listaUsuarios.length; x++) {
+    if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value) ){
+      //Guardando o objeto validado no localStorage.
+      localStorage.setItem("usuario-valida", JSON.stringify(listaUsuarios[x]));
+
+      elMsgStatus.setAttribute("class","sucesso");
+      elMsgStatus.innerText = "Login realizado com Sucesso!"; 
+      setTimeout(()=>{
+        elMsgStatus.setAttribute("class","valida");
+        elMsgStatus.innerText = "";
+        window.location.href = "../status/sucesso.html";
+      },3000);
+      return false;
+    }
   }
 
-  if (senha.length < 6) {
-    alert("A senha deve ter no mínimo 6 caracteres!");
-  }
+    elMsgStatus.setAttribute("class","erro");
+    elMsgStatus.innerText = "Email ou Senha incorretos!";
+    setTimeout(()=>{
+      elMsgStatus.setAttribute("class","valida");
+      elMsgStatus.innerText = "";
+      window.location.href = "../status/erro.html";
+    },3000);
 
-  else {
-    console.log("Email: " + email);
-    console.log("Senha: " + senha); 
-  }
-});
+    return false;
+
+}
+
+//toggle
+//classList

@@ -27,12 +27,26 @@
 // const minhaFunc = ()=>{
 //     console.log("EXECUTOU!");
 // }
+// const minhaFunc = ()=>{
+//     console.log("EXECUTOU!");
+// }
 
+// elBtn.addEventListener("click",()=>{
 // elBtn.addEventListener("click",()=>{
 
 //     const email = document.querySelector("input[type=email]").value;
 //     const senha = document.querySelector("input[type=password]").value;
+//     const email = document.querySelector("input[type=email]").value;
+//     const senha = document.querySelector("input[type=password]").value;
 
+//     if(email == "" || senha == ""){
+//         apresentaMsgTela("Campo vazio!","Preencha todos os campos!");
+//     }else{
+//         if(senha.length < 6)
+//             apresentaMsgTela("Senha fora do padrão");
+//         else
+//             minhaFunc();
+//     }
 //     if(email == "" || senha == ""){
 //         apresentaMsgTela("Campo vazio!","Preencha todos os campos!");
 //     }else{
@@ -45,6 +59,7 @@
 
 
     
+// });
 // });
 
 
@@ -654,7 +669,11 @@
 // console.log(elBtn.innerText);
 
 // const elBtn = document.querySelector("button[type='submit']");
+// const elBtn = document.querySelector("button[type='submit']");
 
+// elBtn.addEventListener("click", function(){
+//   const email = document.querySelector("input[type='email']").value;
+//   const senha = document.querySelector("input[type='password']").value
 // elBtn.addEventListener("click", function(){
 //   const email = document.querySelector("input[type='email']").value;
 //   const senha = document.querySelector("input[type='password']").value
@@ -662,7 +681,13 @@
 //   if (email === "" || senha === "") {
 //     alert("Preencha todos os campos!");
 //   }
+//   if (email === "" || senha === "") {
+//     alert("Preencha todos os campos!");
+//   }
 
+//   if (senha.length < 6) {
+//     alert("A senha deve ter no mínimo 6 caracteres!");
+//   }
 //   if (senha.length < 6) {
 //     alert("A senha deve ter no mínimo 6 caracteres!");
 //   }

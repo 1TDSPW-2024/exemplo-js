@@ -2,6 +2,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+<<<<<<< HEAD
+
+}
+
+.sucesso{
+color:#0b700b;
+font-weight: 500;
+background-color: #8bea8b;
+border: 2px solid #0b700b;
+}
+
+.erro{
+color:#c61523;
+font-weight: 500;
+background-color: #f38a8a;
+border: 2px solid #f3081c;
+=======
 }
 
 .sucesso{
@@ -20,4 +37,5 @@ font-size: 1.5rem;
 text-align: center;
 background-color: #f18181;
 border: 2px solid #ff0000;
+>>>>>>> 2b04ab13df96dd355244c2bf2442c7b5d208931e
 }

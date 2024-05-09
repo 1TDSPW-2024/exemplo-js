@@ -9,43 +9,43 @@
 // function apresentaMsgTela(msg1,msg2){
 //     // alert(msg1+msg2);
 //     alert(`${msg1} qualquer ${msg2}`);
+// // }
+
+// const apresentaMsgTela = (msg1,msg2)=>{
+//     alert(`${msg1} qualquer ${msg2}`);
 // }
 
-const apresentaMsgTela = (msg1,msg2)=>{
-    alert(`${msg1} qualquer ${msg2}`);
-}
+// // let msg1 = "Mensagem";
+// // let msg2 = " para a tela";
 
-// let msg1 = "Mensagem";
-// let msg2 = " para a tela";
+// // apresentaMsgTela(msg1,msg2);
 
-// apresentaMsgTela(msg1,msg2);
-
-//Recuperando o botão submit com querySelector
-const elBtn = document.querySelector("button[type=submit]");
+// //Recuperando o botão submit com querySelector
+// const elBtn = document.querySelector("button[type=submit]");
 
 
-const minhaFunc = ()=>{
-    console.log("EXECUTOU!");
-}
+// const minhaFunc = ()=>{
+//     console.log("EXECUTOU!");
+// }
 
-elBtn.addEventListener("click",()=>{
+// elBtn.addEventListener("click",()=>{
 
-    const email = document.querySelector("input[type=email]").value;
-    const senha = document.querySelector("input[type=password]").value;
+//     const email = document.querySelector("input[type=email]").value;
+//     const senha = document.querySelector("input[type=password]").value;
 
-    if(email == "" || senha == ""){
-        apresentaMsgTela("Campo vazio!","Preencha todos os campos!");
-    }else{
-        if(senha.length < 6)
-            apresentaMsgTela("Senha fora do padrão");
-        else
-            minhaFunc();
-    }
+//     if(email == "" || senha == ""){
+//         apresentaMsgTela("Campo vazio!","Preencha todos os campos!");
+//     }else{
+//         if(senha.length < 6)
+//             apresentaMsgTela("Senha fora do padrão");
+//         else
+//             minhaFunc();
+//     }
         
 
 
     
-});
+// });
 
 
 
@@ -653,22 +653,62 @@ elBtn.addEventListener("click",()=>{
 // elBtn.innerHTML = "ME CLICA";
 // console.log(elBtn.innerText);
 
-const elBtn = document.querySelector("button[type='submit']");
+// const elBtn = document.querySelector("button[type='submit']");
 
-elBtn.addEventListener("click", function(){
-  const email = document.querySelector("input[type='email']").value;
-  const senha = document.querySelector("input[type='password']").value
+// elBtn.addEventListener("click", function(){
+//   const email = document.querySelector("input[type='email']").value;
+//   const senha = document.querySelector("input[type='password']").value
 
-  if (email === "" || senha === "") {
-    alert("Preencha todos os campos!");
+//   if (email === "" || senha === "") {
+//     alert("Preencha todos os campos!");
+//   }
+
+//   if (senha.length < 6) {
+//     alert("A senha deve ter no mínimo 6 caracteres!");
+//   }
+
+//   else {
+//     console.log("Email: " + email);
+//     console.log("Senha: " + senha); 
+//   }
+// });
+
+let listaUsuarios = [
+  {nomeCompleto:"Joao das Couves", emailUsuario:"jo@com", senhaUsuario:"123"},
+  {nomeCompleto:"Mario Willians", emailUsuario:"mo@com", senhaUsuario:"123"},
+  {nomeCompleto:"Maria Linha", emailUsuario:"ma@com", senhaUsuario:"123"},
+  {nomeCompleto:"Rei Luizinho", emailUsuario:"re@com", senhaUsuario:"123"},
+  {nomeCompleto:"Duley Fred", emailUsuario:"du@com", senhaUsuario:"123"},
+];
+
+
+function validaLogin(input1,input2){
+
+  const msgStatus = document.querySelector(".valida");
+
+  for (let x = 0; x < listaUsuarios.length; x++) {
+    
+    if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
+
+      msgStatus.setAttribute("class","sucesso");
+      msgStatus.innerText = "Logado com sucesso!";
+
+      setTimeout(()=>{
+        msgStatus.setAttribute("class","valida");
+        msgStatus.innerText = "";
+        window.location.href = "../status/sucesso.html";
+      }, 3000);
+
+      return false;
+    }
   }
 
-  if (senha.length < 6) {
-    alert("A senha deve ter no mínimo 6 caracteres!");
-  }
-
-  else {
-    console.log("Email: " + email);
-    console.log("Senha: " + senha); 
-  }
-});
+  msgStatus.setAttribute("class","erro");
+  msgStatus.innerText = "Ocorreu um erro!";
+  setTimeout(()=>{
+    msgStatus.setAttribute("class","valida");
+    msgStatus.innerText = "";
+    window.location.href = "../status/erro.html";
+  }, 3000);
+  return false;
+}

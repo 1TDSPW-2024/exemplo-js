@@ -10,7 +10,7 @@
     <script src="./js/script.js" defer></script>
 
 </head>
-
+ +
 <body>
     
     <header id="topo">
@@ -20,19 +20,26 @@
                 <li class="link"><a href="#">JavaScript</a></li>
                 <li class="link"><a href="#">Java</a></li>
                 <li class="link"><a href="#">C#</a></li>
+                <li class="link"><a href="./status/sucesso.html">Sucesso</a></li>
+                
             </ul>
         </nav>
     </header>
 
     <div>
+        <a href="./status/sucesso.html?nome=Joaquim&idade=12">JOAQUIM</a>
+    </div>
+
+    <div>
         <h2>VALIDAÇÃO</h2>
+        <p class="valida"></p>
         <div>
-            <form action="#" method="post" onsubmit="return false">
+            <form action="#" method="get" onsubmit="return validaLogin(idEmail,idSenha)">
                 <fieldset>
                     <legend>LOGIN</legend>
                     <div>
                         <label for="idEmail">Email</label>
-                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email">
+                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email" required >
                     </div>
                     <div>
                         <label for="idSenha">Senha</label>
@@ -43,21 +50,12 @@
                         <label for="idLembrar">Lembrar-me</label>
                     </div>
                     <div>
-<<<<<<< HEAD
                         <button type="submit" >Enviar</button>
-=======
-                        <button type="submit" id="btnSubmit">Enviar</button>
->>>>>>> 1df9b2d7e2830f19018eb66b938137a983df0866
                     </div>
                 </fieldset>
             </form>
         </div>
     </div>
-<<<<<<< HEAD
 
 </body>                     
 </html> 
-=======
-</body>                     
-</html> 
->>>>>>> 1df9b2d7e2830f19018eb66b938137a983df0866

@@ -705,7 +705,7 @@ let listaUsuarios = [
   {nomeCompleto:"Rei Luizinho", emailUsuario:"re@com", senhaUsuario:"123"},
   {nomeCompleto:"Duley Fred", emailUsuario:"du@com", senhaUsuario:"123"},
 ];
-
+ 
 
 function validaLogin(input1,input2){
 

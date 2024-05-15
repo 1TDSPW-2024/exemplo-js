@@ -705,7 +705,7 @@ let listaUsuarios = [
   {nomeCompleto:"Rei Luizinho", emailUsuario:"re@com", senhaUsuario:"123"},
   {nomeCompleto:"Duley Fred", emailUsuario:"du@com", senhaUsuario:"123"},
 ];
-
+ 
 
 function validaLogin(input1,input2){
 
@@ -714,6 +714,9 @@ function validaLogin(input1,input2){
   for (let x = 0; x < listaUsuarios.length; x++) {
     
     if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
+
+      
+      localStorage.setItem("usuario-validado", JSON.stringify(listaUsuarios[x]));
 
       msgStatus.setAttribute("class","sucesso");
       msgStatus.innerText = "Logado com sucesso!";

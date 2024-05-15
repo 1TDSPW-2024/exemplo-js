@@ -676,7 +676,7 @@
 let listaUsuarios = [
   {emailUsuario:"jo@email.com", senhaUsuario:"123456"},
   {emailUsuario:"re@email.com", senhaUsuario:"123456"},
-  {emailUsuario:"mo@email.com", senhaUsuario:"123456"},
+  {emailUsuario:"mo@com", senhaUsuario:"123"},
   {emailUsuario:"lu@email.com", senhaUsuario:"123456"},
   {emailUsuario:"du@email.com", senhaUsuario:"123456"}
 ];

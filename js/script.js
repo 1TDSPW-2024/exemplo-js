@@ -715,6 +715,9 @@ function validaLogin(input1,input2){
     
     if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
 
+      
+      localStorage.setItem("usuario-validado", JSON.stringify(listaUsuarios[x]));
+
       msgStatus.setAttribute("class","sucesso");
       msgStatus.innerText = "Logado com sucesso!";
 

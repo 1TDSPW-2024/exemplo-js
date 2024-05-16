@@ -12,4 +12,4 @@ em protótipos, [tipagem fraca], [dinâmica] e [funções de primeira classe].
 - Possui suporte à [programação funcional] e apresenta recursos como fechamentos e [funções de alta ordem]
 comumente indisponíveis em linguagens populares como [Java] e [C++].
 - É a linguagem de programação mais utilizada do mundo atualmente...
-
+- Validação de e-mails e cpf

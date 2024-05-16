@@ -968,3 +968,14 @@ function validaLogin(input1, input2) {
       return false;
   }
 }
+
+let inputCpf = document.querySelector("#idCpf");
+inputCpf.addEventListener("input",()=>{
+    let cpf = inputCpf.value;
+    let cpfLimpo = cpf.replace(/[^0-9]/g,"")
+                            .replace(/(\d{3})(\d)/,'$1.$2')
+                            .replace(/(\d{3})(\d)/,'$1.$2')
+                            .replace(/(\d{3})(\d)/,'$1.$2')
+                            .replace(/(-\d{2})\d+?$/,'$1');
+    inputCpf.value = cpfLimpo;    
+});

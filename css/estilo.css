@@ -30,3 +30,11 @@
   border: 2px solid #f3081c;
 
 }
+input[name=txtEmail]:invalid{
+  border:2 px solid red;
+outline:none;
+}
+input[name=txtEmail]:valid{
+  border:2 px solid green;
+outline:none;
+}

@@ -40,7 +40,7 @@
         <legend>Login</legend>
         <div>
           <label for="idEmail">Email</label>
-          <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email" required minlength="11" pattern="[a-z]{10}@[a-z]{2-20}.[a-z]{2-3}[.a-z]{0-3}">
+          <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email" required minlength="11" pattern="[a-z0-9.%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}&" oninvalid="this.sertCustomValidity('Digite o padrao correto')">
         </div>
         <div>
           <label for="idSenha">Senha</label>

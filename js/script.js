@@ -969,8 +969,7 @@ msgStauts.setAttribute("class","erro");
     }, 3000);
     return false;
 }
-//toggle
-//classList
+
 
   msgStatus.setAttribute("class","erro");
   msgStatus.innerText = "Ocorreu um erro!";

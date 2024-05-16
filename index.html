@@ -10,26 +10,9 @@
     <script src="./js/script.js" defer></script>
 
 </head>
- +
+ 
 <body>
-    
-    <header id="topo">
-        <h1 id="titulo">JavaScript</h1>
-        <nav>
-            <ul>
-                <li class="link"><a href="#">JavaScript</a></li>
-                <li class="link"><a href="#">Java</a></li>
-                <li class="link"><a href="#">C#</a></li>
-                <li class="link"><a href="./status/sucesso.html">Sucesso</a></li>
-                
-            </ul>
-        </nav>
-    </header>
-
-    <div>
-        <a href="./status/sucesso.html?nome=Joaquim&idade=12">JOAQUIM</a>
-    </div>
-
+ 
     <div>
         <h2>VALIDAÇÃO</h2>
         <p class="valida"></p>
@@ -39,11 +22,16 @@
                     <legend>LOGIN</legend>
                     <div>
                         <label for="idEmail">Email</label>
-                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email" required >
+                        
+                        <input type="text" name="txtEmail" id="idEmail" placeholder="Digite seu email" required  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" oninvalid="this.setCustomValidity('Digite o padrão correto!')">
                     </div>
                     <div>
                         <label for="idSenha">Senha</label>
                         <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
+                    </div>
+                    <div>
+                        <label for="idCpf">CPF</label>
+                        <input type="text" name="txtCpf" id="idCpf" placeholder="000.000.000-00">
                     </div>
                     <div>
                         <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>

@@ -18,3 +18,13 @@
   background-color: #f38a8a;
   border: 2px solid #f3081c;
 }
+
+input[name=txtEmail]:invalid{
+  border: 2px solid #f3081c;
+  outline: none;
+}
+
+input[name=txtEmail]:valid{
+  border: 2px solid #1cd338;
+  outline: none;
+}

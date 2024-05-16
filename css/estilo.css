@@ -18,3 +18,8 @@ font-weight: 500;
 background-color: #f38a8a;
 border: 2px solid #f3081c;
 }
+
+input[name=txtEmail]:invalid{
+border: 2px solid #f3081c;
+outline: none;
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/estilo.css" />
     <title>JavaScript</title>
+    <script src="./js/script.js" defer></script>
   
 </head>
 
@@ -26,8 +27,6 @@
     <div>
 
       <a href="./status/sucesso.html?nome=Joaquim&idade=12">Joaquim</a>
-
-        <a href="./status/sucesso.html?nome=Joaquim&idade=12">JOAQUIM</a>
     </div>
 
   
@@ -41,7 +40,7 @@
         <legend>Login</legend>
         <div>
           <label for="idEmail">Email</label>
-          <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email" required>
+          <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email" required minlength="11" pattern="[a-z]{10}@[a-z]{2-20}.[a-z]{2-3}[.a-z]{0-3}">
         </div>
         <div>
           <label for="idSenha">Senha</label>

@@ -2,20 +2,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 .sucesso{
-  color:#085608;
+  color:#0b700b;
   font-weight: 500;
+
   font-size: 1.5rem;
   background-color: #5cdf5c;
   border: 2px solid #085608;
+
+  background-color: #8bea8b;
+  border: 2px solid #0b700b;
+
 }
 
 .erro{
-  color:#ff0000;
+  color:#c61523;
   font-weight: 500;
+
   font-size: 1.5rem;
   background-color: #f18181;
   border: 2px solid #ff0000;
+
+  background-color: #f38a8a;
+  border: 2px solid #f3081c;
+
 }

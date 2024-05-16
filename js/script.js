@@ -11,41 +11,41 @@
 //     alert(`${msg1} qualquer ${msg2}`);
 // }
 
-const apresentaMsgTela = (msg1,msg2)=>{
-    alert(`${msg1} qualquer ${msg2}`);
-}
+// const apresentaMsgTela = (msg1,msg2)=>{
+//     alert(`${msg1} qualquer ${msg2}`);
+// }
 
 // let msg1 = "Mensagem";
 // let msg2 = " para a tela";
 
 // apresentaMsgTela(msg1,msg2);
 
-//Recuperando o botão submit com querySelector
-const elBtn = document.querySelector("button[type=submit]");
+// //Recuperando o botão submit com querySelector
+// const elBtn = document.querySelector("button[type=submit]");
 
 
-const minhaFunc = ()=>{
-    console.log("EXECUTOU!");
-}
+// const minhaFunc = ()=>{
+//     console.log("EXECUTOU!");
+// }
 
-elBtn.addEventListener("click",()=>{
+// elBtn.addEventListener("click",()=>{
 
-    const email = document.querySelector("input[type=email]").value;
-    const senha = document.querySelector("input[type=password]").value;
+//     const email = document.querySelector("input[type=email]").value;
+//     const senha = document.querySelector("input[type=password]").value;
 
-    if(email == "" || senha == ""){
-        apresentaMsgTela("Campo vazio!","Preencha todos os campos!");
-    }else{
-        if(senha.length < 6)
-            apresentaMsgTela("Senha fora do padrão");
-        else
-            minhaFunc();
-    }
+//     if(email == "" || senha == ""){
+//         apresentaMsgTela("Campo vazio!","Preencha todos os campos!");
+//     }else{
+//         if(senha.length < 6)
+//             apresentaMsgTela("Senha fora do padrão");
+//         else
+//             minhaFunc();
+//     }
         
 
 
     
-});
+// });
 
 
 

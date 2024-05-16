@@ -1,25 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/estilo.css" />
-    <script src="./js/script.js" defer></script>
-    <title>JavaScript</title>
-  </head>
 
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>JavaScript</title>
+
+    <script src="./js/script.js" defer></script>
+
+</head>
+ +
+<body>
+    
     <header id="topo">
-      <h1 id="titulo">JavaScript</h1>
-      <nav>
-        <ul>
-          <li class="link"><a href="#">JavaScript</a></li>
-          <li class="link"><a href="#">Java</a></li>
-          <li class="link"><a href="#">C#</a></li>
-        </ul>
-      </nav>
+        <h1 id="titulo">JavaScript</h1>
+        <nav>
+            <ul>
+                <li class="link"><a href="#">JavaScript</a></li>
+                <li class="link"><a href="#">Java</a></li>
+                <li class="link"><a href="#">C#</a></li>
+                <li class="link"><a href="./status/sucesso.html">Sucesso</a></li>
+                
+            </ul>
+        </nav>
     </header>
 
-    <button id="botao">Teste de botão</button>
-  </body>
-</html>
+    <div>
+        <a href="./status/sucesso.html?nome=Joaquim&idade=12">JOAQUIM</a>
+    </div>
+
+    <div>
+        <h2>VALIDAÇÃO</h2>
+        <p class="valida"></p>
+        <div>
+            <form action="#" method="get" onsubmit="return validaLogin(idEmail,idSenha)">
+                <fieldset>
+                    <legend>LOGIN</legend>
+                    <div>
+                        <label for="idEmail">Email</label>
+                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email" required >
+                    </div>
+                    <div>
+                        <label for="idSenha">Senha</label>
+                        <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>
+                        <label for="idLembrar">Lembrar-me</label>
+                    </div>
+                    <div>
+                        <button type="submit" >Enviar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+</body>                     
+</html> 

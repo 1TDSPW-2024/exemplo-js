@@ -945,39 +945,26 @@ let listaUsuarios=[
 ];
 
 
-function validaLogin(input1,input2){
-  const msgStatus = document.querySelector(".valida")
-for (let x = 0; x < array.length; x++) {
-  
-  if((listaUsuarios[x].emailUsuario==input1.value) && (usuario.senhaUsuario==input2.value)){
-    msgStatus.setAttribute("class","sucesso");
-    msgStatus.innerText = "Logado com sucesso";
-    setTimeout(()=>{
-      msgStatus.setAttribute("class","valida");
-      msgStatus.innerText=""
-      window.location.href="../status/sucesso.html"
-    }, 3000);
-    return false;
+function validaLogin(input1, input2) {
+  const msgStatus = document.querySelector(".valida");
+  for (let x = 0; x < array.length; x++) {
+      if ((listaUsuarios[x].emailUsuario == input1.value) && (usuario.senhaUsuario == input2.value)) {
+          msgStatus.setAttribute("class", "sucesso");
+          msgStatus.innerText = "Logado com sucesso";
+          setTimeout(() => {
+              msgStatus.setAttribute("class", "valida");
+              msgStatus.innerText = "";
+              window.location.href = "../status/sucesso.html";
+          }, 3000);
+          return false;
+      }
+      msgStatus.setAttribute("class", "erro");
+      msgStatus.innerText = "Ocorreu um erro";
+      setTimeout(() => {
+          msgStatus.setAttribute("class", "valida");
+          msgStatus.innerText = "";
+          window.location.href = "../status/erro.html";
+      }, 3000);
+      return false;
   }
 }
-msgStauts.setAttribute("class","erro");
-    msgStatus.innerText = "Ocorreu um erro";
-    setTimeout(()=>{
-      msgStatus.setAttribute("class","valida");
-      msgStatus.innerText=""
-      window.location.href="../status/erro.html"
-    }, 3000);
-    return false;
-}
-
-
-  msgStatus.setAttribute("class","erro");
-  msgStatus.innerText = "Ocorreu um erro!";
-  setTimeout(()=>{
-    msgStatus.setAttribute("class","valida");
-    msgStatus.innerText = "";
-    window.location.href = "../status/erro.html";
-  }, 3000);
-  return false;
-
-

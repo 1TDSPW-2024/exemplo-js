@@ -10,70 +10,68 @@
   </head>
 
   <body>
-    <div>
-      <h2>VALIDAÇÃO</h2>
+    <h2>VALIDAÇÃO</h2>
 
-      <a href="#" id="btnLogin">LOGIN</a>
+    <a href="#" id="btnLogin">LOGIN</a>
 
-      <dialog>
-        <p class="valida"></p>
-        <div>
-          <form
-            action="#"
-            method="get"
-            onsubmit="return validaLogin(idEmail,idSenha)"
-          >
-            <fieldset>
-              <a href="#" id="btnClose">X</a>
-              <legend>LOGIN</legend>
-              <div>
-                <label for="idEmail">Email</label>
+    <dialog>
+      <p class="valida"></p>
+      <div>
+        <form
+          action="#"
+          method="get"
+          onsubmit="return validaLogin(idEmail,idSenha)"
+        >
+          <fieldset>
+            <a href="#" id="btnClose">X</a>
+            <legend>LOGIN</legend>
+            <div>
+              <label for="idEmail">Email</label>
 
-                <input
-                  type="text"
-                  name="txtEmail"
-                  id="idEmail"
-                  placeholder="Digite seu email"
-                  required
-                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-                  oninvalid="this.setCustomValidity('Digite o padrão correto!')"
-                />
-              </div>
-              <div>
-                <label for="idSenha">Senha</label>
-                <input
-                  type="password"
-                  name="txtSenha"
-                  id="idSenha"
-                  placeholder="Digite sua senha"
-                />
-              </div>
-              <div>
-                <label for="idCpf">CPF</label>
-                <input
-                  type="text"
-                  name="txtCpf"
-                  id="idCpf"
-                  placeholder="000.000.000-00"
-                />
-              </div>
-              <div>
-                <input
-                  type="checkbox"
-                  name="txtLembrar"
-                  id="idLembrar"
-                  value="lembrete"
-                  checked
-                />
-                <label for="idLembrar">Lembrar-me</label>
-              </div>
-              <div>
-                <button type="submit">Enviar</button>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-      </dialog>
-    </div>
+              <input
+                type="text"
+                name="txtEmail"
+                id="idEmail"
+                placeholder="Digite seu email"
+                required
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                oninvalid="this.setCustomValidity('Digite o padrão correto!')"
+              />
+            </div>
+            <div>
+              <label for="idSenha">Senha</label>
+              <input
+                type="password"
+                name="txtSenha"
+                id="idSenha"
+                placeholder="Digite sua senha"
+              />
+            </div>
+            <div>
+              <label for="idCpf">CPF</label>
+              <input
+                type="text"
+                name="txtCpf"
+                id="idCpf"
+                placeholder="000.000.000-00"
+              />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="txtLembrar"
+                id="idLembrar"
+                value="lembrete"
+                checked
+              />
+              <label for="idLembrar">Lembrar-me</label>
+            </div>
+            <div>
+              <button type="submit">Enviar</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </dialog>
   </body>
 </html>

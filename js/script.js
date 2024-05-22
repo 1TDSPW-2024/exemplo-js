@@ -628,9 +628,31 @@ inputCpf.addEventListener("input", () => {
 });
 
 //Capturar os elementos a e dialog:
-const botaologin = documente.querySelector("#btnlogin");
+const botaoLogin = document.querySelector("#btnLogin");
 const modal = document.querySelector("dialog");
 
-botaologin.addEventListener("click", () => {
-  modal.show();
+botaoLogin.addEventListener("click", () => {
+  modal.showModal();
 });
+
+const botaoClose = document.querySelector("#btnClose");
+botaoClose.addEventListener("click", () => {
+  modal.close();
+});
+
+// botaoLogin.addEventListener("click", (e)=>{
+//   e.target.setAttribute("class","");
+//   modal.open()
+// });
+
+// botaoLogin.addEventListener("mouseover", ()=>{
+//   modal.show();
+// });
+
+// document.querySelector(".btnCloseLogin").addEventListener("mouseleave", (e)=>{
+//   if(e.target.className == ""){
+//     modal.open();
+//   }else{
+//     modal.close();
+//   }
+// });

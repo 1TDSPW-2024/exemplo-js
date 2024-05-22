@@ -45,9 +45,9 @@ input[name="txtEmail"]:valid {
 }
 
 #btnClose {
-  padding: 0;
-  width: 20px;
-  height: 20px;
+  padding: 1px;
+  width: 25px;
+  height: 25px;
   float: right;
   margin-top: 0;
   margin-right: 1%;
@@ -56,4 +56,17 @@ input[name="txtEmail"]:valid {
 
 #btnLogin:hover {
   text-decoration: underline;
+}
+
+#btnClose:hover {
+  text-decoration: underline;
+}
+
+dialog {
+  margin: 5% auto;
+  border: none;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
 }

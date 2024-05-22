@@ -23,7 +23,6 @@
 // //Recuperando o botão submit com querySelector
 // const elBtn = document.querySelector("button[type=submit]");
 
-
 // const minhaFunc = ()=>{
 //     console.log("EXECUTOU!");
 // }
@@ -55,16 +54,11 @@
 //         else
 //             minhaFunc();
 //     }
-        
 
-
-    
 // });
 // });
 
-
-
-// // Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas. 
+// // Variáveis não declaradas: O strict mode impediria o uso de variáveis não declaradas.
 // //Por exemplo:
 // // a = "Joaquim";
 // // console.log(a);
@@ -84,7 +78,6 @@
 // // nome = "NADA";
 // // console.log(nome);
 
-
 // var nome = "Joaquim";
 
 // if(true)
@@ -94,7 +87,6 @@
 // {
 //     let nome = "João";
 // }
-
 
 // console.log(nome);
 
@@ -368,7 +360,6 @@
 // // let y = "5";
 // // console.log(x === y); // Saída: false
 
-
 // // Diferente (!=):
 // // Verifica se dois valores não são iguais, convertendo os tipos, se necessário.
 // // let x = 5;
@@ -510,11 +501,10 @@
 // teste(
 
 // function apresentaMsgTela(msg1, msg2) {
-    
+
 //     alert(msg1+" "+msg2);
 
 // }
-
 
 // const apresentaMsgTela = (msg1, msg2) => {
 //     alert(msg1+" "+msg2);
@@ -568,35 +558,44 @@
 
 //   else {
 //     console.log("Email: " + email);
-//     console.log("Senha: " + senha); 
+//     console.log("Senha: " + senha);
 //   }
 // });
 
 let listaUsuarios = [
-  {nomeCompleto:"Joao das Couves", emailUsuario:"jo@com", senhaUsuario:"123"},
-  {nomeCompleto:"Mario Willians", emailUsuario:"mo@com", senhaUsuario:"123"},
-  {nomeCompleto:"Maria Linha", emailUsuario:"ma@com", senhaUsuario:"123"},
-  {nomeCompleto:"Rei Luizinho", emailUsuario:"re@com", senhaUsuario:"123"},
-  {nomeCompleto:"Duley Fred", emailUsuario:"du@com", senhaUsuario:"123"},
+  {
+    nomeCompleto: "Joao das Couves",
+    emailUsuario: "jo@com",
+    senhaUsuario: "123",
+  },
+  {
+    nomeCompleto: "Mario Willians",
+    emailUsuario: "mo@com",
+    senhaUsuario: "123",
+  },
+  { nomeCompleto: "Maria Linha", emailUsuario: "ma@com", senhaUsuario: "123" },
+  { nomeCompleto: "Rei Luizinho", emailUsuario: "re@com", senhaUsuario: "123" },
+  { nomeCompleto: "Duley Fred", emailUsuario: "du@com", senhaUsuario: "123" },
 ];
- 
 
-function validaLogin(input1,input2){
-
+function validaLogin(input1, input2) {
   const msgStatus = document.querySelector(".valida");
 
   for (let x = 0; x < listaUsuarios.length; x++) {
-    
-    if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
+    if (
+      listaUsuarios[x].emailUsuario == input1.value &&
+      listaUsuarios[x].senhaUsuario == input2.value
+    ) {
+      localStorage.setItem(
+        "usuario-validado",
+        JSON.stringify(listaUsuarios[x])
+      );
 
-      
-      localStorage.setItem("usuario-validado", JSON.stringify(listaUsuarios[x]));
-
-      msgStatus.setAttribute("class","sucesso");
+      msgStatus.setAttribute("class", "sucesso");
       msgStatus.innerText = "Logado com sucesso!";
 
-      setTimeout(()=>{
-        msgStatus.setAttribute("class","valida");
+      setTimeout(() => {
+        msgStatus.setAttribute("class", "valida");
         msgStatus.innerText = "";
         window.location.href = "../status/sucesso.html";
       }, 3000);
@@ -605,25 +604,33 @@ function validaLogin(input1,input2){
     }
   }
 
-  msgStatus.setAttribute("class","erro");
+  msgStatus.setAttribute("class", "erro");
   msgStatus.innerText = "Ocorreu um erro!";
-  setTimeout(()=>{
-    msgStatus.setAttribute("class","valida");
+  setTimeout(() => {
+    msgStatus.setAttribute("class", "valida");
     msgStatus.innerText = "";
     window.location.href = "../status/erro.html";
   }, 3000);
   return false;
 }
 
-
 let inputCpf = document.querySelector("#idCpf");
 
-inputCpf.addEventListener("input", ()=>{
+inputCpf.addEventListener("input", () => {
   let cpf = inputCpf.value;
-  let cpfLimpo = cpf.replace(/[^0-9]/g, "")
-                          .replace(/(\d{3})(\d)/, '$1.$2')
-                          .replace(/(\d{3})(\d)/, '$1.$2')
-                          .replace(/(\d{3})(\d)/, '$1-$2')
-                          .replace(/(-\d{2})\d+?$/, '$1');
+  let cpfLimpo = cpf
+    .replace(/[^0-9]/g, "")
+    .replace(/(\d{3})(\d)/, "$1.$2")
+    .replace(/(\d{3})(\d)/, "$1.$2")
+    .replace(/(\d{3})(\d)/, "$1-$2")
+    .replace(/(-\d{2})\d+?$/, "$1");
   inputCpf.value = cpfLimpo;
+});
+
+//Capturar os elementos a e dialog:
+const botaologin = documente.querySelector("#btnlogin");
+const modal = document.querySelector("dialog");
+
+botaologin.addEventListener("click", () => {
+  modal.show();
 });

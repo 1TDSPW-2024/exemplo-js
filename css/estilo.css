@@ -1,25 +1,59 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
-.sucesso{
-color:#0b700b;
-font-weight: 500;
-background-color: #8bea8b;
-border: 2px solid #0b700b;
+.sucesso {
+  color: #0b700b;
+  font-weight: 500;
+  background-color: #8bea8b;
+  border: 2px solid #0b700b;
 }
 
-.erro{
-color:#c61523;
-font-weight: 500;
-background-color: #f38a8a;
-border: 2px solid #f3081c;
+.erro {
+  color: #c61523;
+  font-weight: 500;
+  background-color: #f38a8a;
+  border: 2px solid #f3081c;
 }
 
-input[name=txtEmail]:invalid{
-border: 2px solid #f3081c;
-outline: none;
+input[name="txtEmail"]:invalid {
+  border: 2px solid #f3081c;
+  outline: none;
+}
+
+input[name="txtEmail"]:valid {
+  border: 2px solid #1cd338;
+  outline: none;
+}
+
+#btnLogin,
+#btnClose {
+  text-decoration: none;
+  background-color: #c61523;
+  display: block;
+  width: 10vw;
+  text-align: center;
+  color: #8bea8b;
+  padding: 10px;
+  margin: 5% 0 0 5%;
+  border-radius: 5px;
+  border: 2px solid #8bea8b;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#btnClose {
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin-top: 0;
+  margin-right: 1%;
+  border-radius: 100%;
+}
+
+#btnLogin:hover {
+  text-decoration: underline;
 }

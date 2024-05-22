@@ -1,49 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilo.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/estilo.css" />
     <title>JavaScript</title>
 
     <script src="./js/script.js" defer></script>
+  </head>
 
-</head>
- 
-<body>
- 
+  <body>
     <div>
-        <h2>VALIDAÇÃO</h2>
+      <h2>VALIDAÇÃO</h2>
+
+      <a href="#" id="btnLogin">LOGIN</a>
+
+      <dialog>
         <p class="valida"></p>
         <div>
-            <form action="#" method="get" onsubmit="return validaLogin(idEmail,idSenha)">
-                <fieldset>
-                    <legend>LOGIN</legend>
-                    <div>
-                        <label for="idEmail">Email</label>
-                        
-                        <input type="text" name="txtEmail" id="idEmail" placeholder="Digite seu email" required  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" oninvalid="this.setCustomValidity('Digite o padrão correto!')">
-                    </div>
-                    <div>
-                        <label for="idSenha">Senha</label>
-                        <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
-                    </div>
-                    <div>
-                        <label for="idCpf">CPF</label>
-                        <input type="text" name="txtCpf" id="idCpf" placeholder="000.000.000-00">
-                    </div>
-                    <div>
-                        <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>
-                        <label for="idLembrar">Lembrar-me</label>
-                    </div>
-                    <div>
-                        <button type="submit" >Enviar</button>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-    </div>
+          <form
+            action="#"
+            method="get"
+            onsubmit="return validaLogin(idEmail,idSenha)"
+          >
+            <fieldset>
+              <a href="#" id="btnClose">X</a>
+              <legend>LOGIN</legend>
+              <div>
+                <label for="idEmail">Email</label>
 
-</body>                     
-</html> 
+                <input
+                  type="text"
+                  name="txtEmail"
+                  id="idEmail"
+                  placeholder="Digite seu email"
+                  required
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                  oninvalid="this.setCustomValidity('Digite o padrão correto!')"
+                />
+              </div>
+              <div>
+                <label for="idSenha">Senha</label>
+                <input
+                  type="password"
+                  name="txtSenha"
+                  id="idSenha"
+                  placeholder="Digite sua senha"
+                />
+              </div>
+              <div>
+                <label for="idCpf">CPF</label>
+                <input
+                  type="text"
+                  name="txtCpf"
+                  id="idCpf"
+                  placeholder="000.000.000-00"
+                />
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="txtLembrar"
+                  id="idLembrar"
+                  value="lembrete"
+                  checked
+                />
+                <label for="idLembrar">Lembrar-me</label>
+              </div>
+              <div>
+                <button type="submit">Enviar</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </dialog>
+    </div>
+  </body>
+</html>

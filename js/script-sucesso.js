@@ -1,8 +1,20 @@
 
 
-//Recuperando o objeto validado do localStorage.
-const usuario = JSON.parse(localStorage.getItem("usuario-validado"));
-console.log(usuario.emailUsuario); 
+//Recuperando o token através do sessionStorage
+let tokenUser = sessionStorage.getItem("token");
+if(tokenUser){ 
+    //Recuperando o objeto do usuario logado.
+    const usuario = JSON.parse(localStorage.getItem("usuario-logado"));
+ const elViewUser = document.querySelector("#view-user");
+ elViewUser.innerText = usuario.emailUsuario;
 
-const chaveString = localStorage.getItem("chave");
-console.log(chaveString); 
+ const elLogoutUser = document.querySelector("#logout-user");
+ elLogoutUser.addEventListener("click",()=>{
+    sessionStorage.removeItem("token");
+    localStorage.removeItem("usuario-logado");
+    window.location.href = "../index.html";
+ });
+}
+else{
+    window.location.href = "../erro.html";
+}

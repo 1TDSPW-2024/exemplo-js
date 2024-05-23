@@ -716,40 +716,66 @@ function validaLogin(input1,input2){
     if((listaUsuarios[x].emailUsuario == input1.value) && (listaUsuarios[x].senhaUsuario == input2.value)){
 
       
-      localStorage.setItem("usuario-validado", JSON.stringify(listaUsuarios[x]));
+      localStorage.setItem("usuario-logado", JSON.stringify(listaUsuarios[x]));
+      
+      const userToken = Math.random().toString(16).substring(2, 5)+Math.random().toString(16).substring(2, 5);
+      sessionStorage.setItem("token", userToken);
 
-      msgStatus.setAttribute("class","sucesso");
-      msgStatus.innerText = "Logado com sucesso!";
+
+        //Criando um elemento modal com create element:
+  const modal = document.createElement("dialog");
+  msgStatus.appendChild(modal);
+  modal.setAttribute("class","sucesso");
+  modal.innerHTML = "Logado com sucesso!";
+  modal.showModal();
+  let count = 10;
+  setInterval(()=>{
+    modal.innerHTML = `<p>Logado com sucesso!</p><p>Você será redirecionado em ${count--} !</p>`;
+  },900);
 
       setTimeout(()=>{
         msgStatus.setAttribute("class","valida");
         msgStatus.innerText = "";
         window.location.href = "../status/sucesso.html";
-      }, 3000);
+      }, 10000); 
 
       return false;
     }
   }
 
-  msgStatus.setAttribute("class","erro");
-  msgStatus.innerText = "Ocorreu um erro!";
+  
+  //Criando um elemento modal com create element:
+  const modal = document.createElement("dialog");
+  msgStatus.appendChild(modal);
+  modal.setAttribute("class","erro");
+  modal.innerHTML = "<p>Ocorreu um erro!</p>";
+  modal.innerHTML += "<p>Usuário ou senha incorretos!</p>";
+  modal.showModal();
+
+  let count = 10;
+
+  setInterval(()=>{
+    modal.innerHTML = `<p>Usuário ou senha incorretos!</p><p>Você será redirecionado em ${count--} !</p>`;
+  },900);
+
+  
   setTimeout(()=>{
     msgStatus.setAttribute("class","valida");
     msgStatus.innerText = "";
     window.location.href = "../status/erro.html";
-  }, 3000);
+  }, 10000);
   return false;
 }
 
 
-let inputCpf = document.querySelector("#idCpf");
+// let inputCpf = document.querySelector("#idCpf");
 
-inputCpf.addEventListener("input", ()=>{
-  let cpf = inputCpf.value;
-  let cpfLimpo = cpf.replace(/[^0-9]/g, "")
-                          .replace(/(\d{3})(\d)/, '$1.$2')
-                          .replace(/(\d{3})(\d)/, '$1.$2')
-                          .replace(/(\d{3})(\d)/, '$1-$2')
-                          .replace(/(-\d{2})\d+?$/, '$1');
-  inputCpf.value = cpfLimpo;
-});
+// inputCpf.addEventListener("input", ()=>{
+//   let cpf = inputCpf.value;
+//   let cpfLimpo = cpf.replace(/[^0-9]/g, "")
+//                           .replace(/(\d{3})(\d)/, '$1.$2')
+//                           .replace(/(\d{3})(\d)/, '$1.$2')
+//                           .replace(/(\d{3})(\d)/, '$1-$2')
+//                           .replace(/(-\d{2})\d+?$/, '$1');
+//   inputCpf.value = cpfLimpo;
+// });
